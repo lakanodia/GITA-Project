@@ -418,3 +418,147 @@ body{
         }
     }
 }
+
+
+// page design
+.design-section{
+    background-color: $white;
+    .design-main-div{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px;
+        padding: 100px;
+        .design-section-div-rect{
+            max-width: 500px;
+            width: 100%;
+            height: 550px;
+            .design-img{
+                max-width: 400px;
+                width: 100%;
+                box-shadow: 5px 10px 30px $grey;
+
+            }
+            .design-title{
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            .design-text-div{
+                max-width: 400px;
+                width: 100%;
+                padding: 20px;
+            }
+            .design-text{
+                line-height: 20px;
+            }
+    
+        }
+        .design-section-div-circle{
+            max-width: 500px;
+            width: 100%;
+            height: 650px;
+            position: relative;
+            .dots-design{
+                max-width: 400px;
+                width: 100%;
+                position: absolute;
+                top: 0%;
+                right: 0%;
+            }
+            .design-img-circle{
+                max-width: 400px;
+                width: 100%;
+                border-radius: 350px;
+                position: absolute;
+                top: 5%;
+                left: 0%;
+                box-shadow: 5px 10px 30px $grey;
+            }
+            .design-text-div{
+                max-width: 400px;
+                width: 100%;
+                position: absolute;
+                bottom: 0%;
+                left: 0%;
+                padding: 20px;
+            }
+            .design-title{
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            .design-text{
+                line-height: 20px;
+    
+            }
+            button{
+                max-width: 140px;
+                width: 100%;
+                color: $white;
+                background-color: $grey;
+                padding: 15px;
+                border: solid;
+                border-color: $black;
+                border-radius: 100px;
+                transition: 0.5s;
+                font-family: $roboto;
+                font-size: 20px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            button:hover{
+                background-color: transparent;
+                border-color: $yellow;
+                color: $yellow;
+            }
+        }
+    }
+
+}
+
+// designers section 2
+
+.designers-div {
+    background-image: url(../img/decor4.jpg);
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 100px;
+    .designers-block{
+        max-width: 1000px;
+        width: 100%;
+        @include d-flex(flex, space-between, center);
+        position: absolute;
+        bottom: -10%;
+        left: 17%;
+
+        .designers{
+            max-width: 200px;
+            width: 100%;
+            background-color: $white;
+            padding: 20px;
+            @include d-flex(flex, center, center);
+            flex-direction: column;
+            box-shadow: 5px 10px 30px $grey;
+            .icon{
+                font-size: 60px;
+                color: $yellow;
+                margin-top: 30px;
+            }
+            .number{
+                font-size: 40px;
+                font-weight: 900;
+                color: $yellow;
+                margin-top: 20px;
+            }
+            .title{
+                font-size: 15px;
+                font-weight: 900;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

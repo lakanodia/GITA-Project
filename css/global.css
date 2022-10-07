@@ -507,6 +507,168 @@ body {
           transform: scale(1.05);
 }
 
+.design-section {
+  background-color: rgb(255, 255, 255);
+}
+.design-section .design-main-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 50px;
+  padding: 100px;
+}
+.design-section .design-main-div .design-section-div-rect {
+  max-width: 500px;
+  width: 100%;
+  height: 550px;
+}
+.design-section .design-main-div .design-section-div-rect .design-img {
+  max-width: 400px;
+  width: 100%;
+  -webkit-box-shadow: 5px 10px 30px rgb(83, 83, 83);
+          box-shadow: 5px 10px 30px rgb(83, 83, 83);
+}
+.design-section .design-main-div .design-section-div-rect .design-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.design-section .design-main-div .design-section-div-rect .design-text-div {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+}
+.design-section .design-main-div .design-section-div-rect .design-text {
+  line-height: 20px;
+}
+.design-section .design-main-div .design-section-div-circle {
+  max-width: 500px;
+  width: 100%;
+  height: 650px;
+  position: relative;
+}
+.design-section .design-main-div .design-section-div-circle .dots-design {
+  max-width: 400px;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+.design-section .design-main-div .design-section-div-circle .design-img-circle {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 350px;
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  -webkit-box-shadow: 5px 10px 30px rgb(83, 83, 83);
+          box-shadow: 5px 10px 30px rgb(83, 83, 83);
+}
+.design-section .design-main-div .design-section-div-circle .design-text-div {
+  max-width: 400px;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  padding: 20px;
+}
+.design-section .design-main-div .design-section-div-circle .design-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.design-section .design-main-div .design-section-div-circle .design-text {
+  line-height: 20px;
+}
+.design-section .design-main-div .design-section-div-circle button {
+  max-width: 140px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(83, 83, 83);
+  padding: 15px;
+  border: solid;
+  border-color: black;
+  border-radius: 100px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: "Roboto", serif;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.design-section .design-main-div .design-section-div-circle button:hover {
+  background-color: transparent;
+  border-color: #f1c50e;
+  color: #f1c50e;
+}
+
+.designers-div {
+  background-image: url(../img/decor4.jpg);
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 100px;
+}
+.designers-div .designers-block {
+  max-width: 1000px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: -10%;
+  left: 17%;
+}
+.designers-div .designers-block .designers {
+  max-width: 200px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 5px 10px 30px rgb(83, 83, 83);
+          box-shadow: 5px 10px 30px rgb(83, 83, 83);
+}
+.designers-div .designers-block .designers .icon {
+  font-size: 60px;
+  color: #f1c50e;
+  margin-top: 30px;
+}
+.designers-div .designers-block .designers .number {
+  font-size: 40px;
+  font-weight: 900;
+  color: #f1c50e;
+  margin-top: 20px;
+}
+.designers-div .designers-block .designers .title {
+  font-size: 15px;
+  font-weight: 900;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.eot");
