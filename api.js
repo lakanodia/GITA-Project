@@ -19,7 +19,7 @@ function getPosts() {
     .then((response) => response.json())
 
     .then((jsonData) => {
-      sleepTimer(2);
+      sleepTimer(1);
       postList = jsonData;
       drawAllPosts();
       loadPagination();
