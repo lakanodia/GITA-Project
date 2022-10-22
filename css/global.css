@@ -26,7 +26,7 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol, ul, li {
   list-style: none;
 }
 
@@ -60,6 +60,10 @@ html {
 body {
   font-family: "Roboto", serif;
   background-color: #e5e5e5;
+}
+
+.active-ovelay {
+  display: block;
 }
 
 .header-main-div {
@@ -843,6 +847,93 @@ body {
           justify-content: space-between;
   font-size: 12px;
   font-style: italic;
+}
+
+.spinner {
+  margin: 0 auto;
+}
+
+.page-option .btn {
+  border: none;
+  max-width: 60px;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.post-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.post-list .card {
+  max-width: 250px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.post-list .card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.post-list .card img {
+  width: 100%;
+}
+.post-list .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.pagination .page-item {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 10px;
+  border-radius: 5px;
+}
+.pagination .page-item:hover {
+  background-color: rgb(255, 255, 255);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+.pagination .active {
+  background-color: rgb(255, 255, 255);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 @font-face {

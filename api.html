@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GITA-JS</title>
+    <meta name="description" content="Free Web Task" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Laka Nodia" />
+    <meta property="og:url" content="img/htmlcss.png" />
+    <meta property="og:type" content="GITA-JS Project" />
+    <meta property="og:title" content="GITA-JS" />
+    <meta property="og:description" content="GITA-JS Project" />
+    <meta property="og:image" content="img/htmlcss.png" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="icon" type="text/css" href="img/interior.png" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    </head>
+    <header class="header-block">
+    <div class="header-main-div">
+      <div class="header-logo-block">
+        <a class="a-logo" href="">LOGO</a>
+      </div>
+
+      <nav class="header-nav-block" id="nav-block">
+        <ul class="header-ul-block">
+          <li class="nav-li">
+            <a id="home-nav" href="index.html">Home </a>
+          </li>
+          <li class="nav-li"><a href="visual.html">About</a></li>
+          <li class="nav-li"><a href="design.html">Designs</a></li>
+          <li class="nav-li"><a href="contact.html">Contact</a></li>
+          <li class="nav-li active-li"><a href="api.html">Posts</a></li>
+        </ul>
+      </nav>
+      <i id="burger-menu" class="fa-solid fa-bars burger"></i>
+    </div>
+  </header>
+
+  <body class="container-fluid">
+    <div class="spinner"id="spinner" style="max-width: 100px; width:100%; margin: 0 auto; font-size: 20px;">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="page-option" style="max-width: 100px; width: 100%; margin: 15px auto;">
+        <select
+        class="btn""
+        id="page-row-number"
+        onchange="pageRowChangeEventHandler()">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+        </select>
+    </div>
+
+
+    <div>
+      <div
+        id="postList"
+        class="post-list"
+      >
+    </div>
+    </div>
+
+    <div class="pagination" id="nav-number" style="max-width: 400px; width: 100%; margin: 0 auto;"></div>
+
+    <footer class="footer">
+      <div class="footer-div">
+        <div class="lists">
+          <ul class="ul-list">
+            <h2 class="title">Products</h2>
+            <li>Design</li>
+            <li>Decor</li>
+            <li>Interior</li>
+            <li>Exterior</li>
+          </ul>
+          <ul class="ul-list">
+            <h2 class="title">Products</h2>
+            <li>Design</li>
+            <li>Decor</li>
+            <li>Interior</li>
+            <li>Exterior</li>
+          </ul>
+          <ul class="ul-list">
+            <h2 class="title">Products</h2>
+            <li>Design</li>
+            <li>Decor</li>
+            <li>Interior</li>
+            <li>Exterior</li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-icons">
+        <i class="fa-brands fa-facebook icon"></i>
+        <i class="fa-brands fa-twitter icon"></i>
+        <i class="fa-brands fa-linkedin icon"></i>
+        <i class="fa-brands fa-google icon"></i>
+        <i class="fa-brands fa-youtube icon"></i>
+        <i class="fa-solid fa-envelope icon"></i>
+      </div>
+    </footer>
+    <script src="api.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
