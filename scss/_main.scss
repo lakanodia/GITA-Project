@@ -1,683 +1,680 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-body{
-    font-family: $roboto;
-    background-color: $begie;
+body {
+  font-family: $roboto;
+  background-color: $begie;
+}
 
-}
 // header
-.header-main-div{
-    padding: 20px;
-    color: rgb(51, 51, 51);
-    .header-logo-block{
-        cursor: pointer;
-        font-size: 20px;
-        font-weight: 900
-    }
+.header-main-div {
+  padding: 20px;
+  color: rgb(51, 51, 51);
+  transition: 0.5s;
+  .header-logo-block {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 900;
+    transition: 0.5s;
+  }
+  .burger {
+    font-weight: 900;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+  }
+  .burger:hover {
+    color: $grey;
+  }
+  .close {
+    font-weight: 900;
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
+  }
+
+  @include d-flex(flex, space-between, center);
+  .header-ul-block {
+    font-size: 20px;
     @include d-flex(flex, space-between, center);
-    .header-ul-block{
-        font-size: 20px;
-        @include d-flex(flex, space-between, center);
-        .nav-li{
-            margin-right: 30px;
-            cursor: pointer;
-            .dropdown-content{
-                display: flex;
-                flex-direction: column;
-                background-color: #f9f9f9;
-                min-width: 160px;
-                margin-top: 10px;
-                padding: 12px 16px;
-                a{
-                    margin-top: 10px;
-                }
-                display: none;
-            }
-            font-size: 20px;
+    .nav-li {
+      margin-right: 30px;
+      cursor: pointer;
+      .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        margin-top: 10px;
+        padding: 12px 16px;
+        a {
+          margin-top: 10px;
         }
-        .active-li{
-            color: $blue;
-            font-weight: 900;
-        }
-    
+        display: none;
+      }
+      font-size: 20px;
     }
-    
+    .active-li {
+      color: $blue;
+      font-weight: 900;
+    }
+  }
 }
 
 // section 1
 .banner-img-div {
-    background-image: url(../img/banner.jpg);
+  background-image: url(../img/banner.jpg);
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .banner-text-div {
+    max-width: 500px;
     width: 100%;
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    .banner-text-div{
-        max-width: 500px;
-        width: 100%;
-        border: solid;
-        border-color: $white;
-        padding: 15px;
-        position: absolute;
-        top: 15%;
-        right: 15%;
-        color: $white;
-        .banner-main-title{
-            font-size: 70px;
-            font-weight: 900;
-            margin-top: 50px;
-        }
-        .banner-title{
-            font-size: 25px;
-            line-height: 35px;
-            margin-top: 15px;
-        }
-        .banner-button{
-            max-width: 170px;
-            width: 100%;
-            margin: 30px 0px ;
-            color: $white;
-            background-color: transparent;
-            padding: 15px;
-            border: solid;
-            border-color: $white;
-            border-radius: 100px;
-            transition: 0.5s;
-            font-family: $roboto;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .banner-button:hover{
-            background-color: $white;
-            color: $yellow;
-        }
-
+    border: solid;
+    border-color: $white;
+    padding: 15px;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    color: $white;
+    .banner-main-title {
+      font-size: 70px;
+      font-weight: 900;
+      margin-top: 50px;
     }
+    .banner-title {
+      font-size: 25px;
+      line-height: 35px;
+      margin-top: 15px;
+    }
+    .banner-button {
+      max-width: 170px;
+      width: 100%;
+      margin: 30px 0px;
+      color: $white;
+      background-color: transparent;
+      padding: 15px;
+      border: solid;
+      border-color: $white;
+      border-radius: 100px;
+      transition: 0.5s;
+      font-family: $roboto;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .banner-button:hover {
+      background-color: $white;
+      color: $yellow;
+    }
+  }
 }
 
 // section2
-.section2{
-
-    .section2-div{
-        max-width: 1000px;
-        width: 100%;
-        margin: 50px auto;
-
-        padding: 10px;
-
-    
-        .section2-title{
-            font-size: 40px;
-            text-align: center;
-            margin-bottom: 40px;
-
-        }
-        .service-main-block{
-            @include d-flex(flex, space-between, center);
-            .service-div{
-                max-width: 220px;
-                width: 100%;
-                height: 300px;
-                background-color: $white;
-                margin: 5px;
-                padding: 30px;
-                @include d-flex(flex, center, center);
-                flex-direction: column;
-                text-align: center;
-                border-top: 5px solid $yellow;
-                transition: 0.5s;
-                cursor: pointer;
-                .service-icon-div{
-                    max-width: 70px;
-                    width: 100%;
-                    height: 70px;
-                    border-radius: 50px;
-                    background-color: $yellow;
-                    text-align: center;
-                    @include d-flex(flex, center, center);
-                    .icon{
-                        font-size: 30px;
-                        color: $white;
-                    }
-                }
-                .title-service{
-                    font-size: 20px;
-                    font-weight: 900;
-                    margin: 20px 0;
-                }
-            }
-            .service-div:hover{
-                transform: translate(-5%);
-            }
-
-        }
-    }
-
-}
-
-
-// section3
-.section3-main-div{
-    position: relative;
-    max-width: 1100px;
+.section2 {
+  .section2-div {
+    max-width: 1000px;
     width: 100%;
-    margin: 0 auto;
-    height: 1500px;
+    margin: 50px auto;
 
-    .decoration-div{
-        max-width: 500px;
+    padding: 10px;
+
+    .section2-title {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .service-main-block {
+      @include d-flex(flex, space-between, center);
+      .service-div {
+        max-width: 220px;
         width: 100%;
         height: 300px;
         background-color: $white;
+        margin: 5px;
         padding: 30px;
-        box-shadow: 5px 10px 30px $grey;
-        position: absolute;
-        top: 10%;
-        left: 20%;
-        z-index: 1;
-        .decor-title{
+        @include d-flex(flex, center, center);
+        flex-direction: column;
+        text-align: center;
+        border-top: 5px solid $yellow;
+        transition: 0.5s;
+        cursor: pointer;
+        .service-icon-div {
+          max-width: 70px;
+          width: 100%;
+          height: 70px;
+          border-radius: 50px;
+          background-color: $yellow;
+          text-align: center;
+          @include d-flex(flex, center, center);
+          .icon {
             font-size: 30px;
-            margin: 20px 0;
-        }
-        .decor-title2{
-            font-style: italic;
-            margin: 20px 0;
-        }
-        .decor-text{
-            margin: 20px 0;
-        }
-        button{
-            max-width: 180px;
-            width: 100%;
             color: $white;
-            background-color: $yellow;
-            padding: 15px;
-            border: solid;
-            border-color: $white;
-            border-radius: 100px;
-            transition: 0.5s;
-            font-family: $roboto;
-            font-size: 20px;
-            cursor: pointer;
+          }
         }
-        button:hover{
-            background-color: transparent;
-            border-color: $yellow;
-            color: $yellow;
+        .title-service {
+          font-size: 20px;
+          font-weight: 900;
+          margin: 20px 0;
         }
-
+      }
+      .service-div:hover {
+        transform: translate(-5%);
+      }
     }
-    .decor-img1{
-        max-width: 350px;
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        position: absolute;
-        top: 20%;
-        left: 2%;
-        box-shadow: 5px 10px 30px $grey;
-    }
-    .decor-img2{
-        max-width: 400px;
-        width: 100%;
-        height: 400px;
-        position: absolute;
-        top: 60%;
-        left: 20%;
-        object-fit: cover;
-        z-index: 1;
-        box-shadow: 5px 10px 30px $grey;
-    }
-    .decor-img3{
-        max-width: 650px;
-        width: 100%;
-        height: 440px;
-        position: absolute;
-        top: 35%;
-        right: 0%;
-        box-shadow: 5px 10px 30px $grey;
-    }
-    .decor-img4{
-        max-width: 500px;
-        width: 100%;
-        height: 350px;
-        position: absolute;
-        top: 75%;
-        right: 5%;
-        box-shadow: 5px 10px 30px $grey;
-    }
-    .text-decor-div{
-        max-width: 350px;
-        width: 100%;
-        padding: 30px;
-        border-left: 5px solid $grey;
-        position: absolute;
-        top: 87%;
-        left: 2%
-
-    }
-
+  }
 }
 
+// section3
+.section3-main-div {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  height: 1500px;
 
-
+  .decoration-div {
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    background-color: $white;
+    padding: 30px;
+    box-shadow: 5px 10px 30px $grey;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 1;
+    .decor-title {
+      font-size: 30px;
+      margin: 20px 0;
+    }
+    .decor-title2 {
+      font-style: italic;
+      margin: 20px 0;
+    }
+    .decor-text {
+      margin: 20px 0;
+    }
+    button {
+      max-width: 180px;
+      width: 100%;
+      color: $white;
+      background-color: $yellow;
+      padding: 15px;
+      border: solid;
+      border-color: $white;
+      border-radius: 100px;
+      transition: 0.5s;
+      font-family: $roboto;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: transparent;
+      border-color: $yellow;
+      color: $yellow;
+    }
+  }
+  .decor-img1 {
+    max-width: 350px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    box-shadow: 5px 10px 30px $grey;
+    object-fit: cover;
+  }
+  .decor-img2 {
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    object-fit: cover;
+    z-index: 1;
+    box-shadow: 5px 10px 30px $grey;
+    object-fit: cover;
+  }
+  .decor-img3 {
+    max-width: 650px;
+    width: 100%;
+    height: 440px;
+    position: absolute;
+    top: 35%;
+    right: 0%;
+    box-shadow: 5px 10px 30px $grey;
+    object-fit: cover;
+  }
+  .decor-img4 {
+    max-width: 500px;
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 75%;
+    right: 5%;
+    box-shadow: 5px 10px 30px $grey;
+    object-fit: cover;
+  }
+  .text-decor-div {
+    max-width: 350px;
+    width: 100%;
+    padding: 30px;
+    border-left: 5px solid $grey;
+    position: absolute;
+    top: 87%;
+    left: 2%;
+  }
+}
 
 // visual.html
-.visual-section1{
-    .vidual-main-div{
-        background-color: $white;
-        width: 100%;
-        height: 900px;
-        position: relative;
+.visual-section1 {
+  .vidual-main-div {
+    background-color: $white;
+    width: 100%;
+    height: 900px;
+    position: relative;
 
-        .visual-img{
-            max-width: 590px;
-            width: 100%;
-            height: 620px;
-            position: absolute;
-            top: 15%;
-            left: 20%;
-            z-index: 1;
-            object-fit: cover;
-        }
-        .visual-text-div{
-            max-width: 400px;
-            width: 100%;
-            height: 450px;
-            background-color: $white;
-            padding: 30px;
-            box-shadow: 5px 10px 30px $grey;
-            position: absolute;
-            top: 25%;
-            left: 55%;
-            z-index: 1;
-
-
-            .visual-title{
-                font-size: 40px;
-                margin: 20px 0;
-    
-            }
-            .visual-title2{
-                margin: 20px 0;
-                line-height: 30px;
-            }
-            .visual-text{
-                font-style: italic;
-                margin: 20px 0;
-            }
-            button{
-                max-width: 180px;
-                width: 100%;
-                color: $white;
-                background-color: $yellow;
-                padding: 15px;
-                border: solid;
-                border-color: $white;
-                border-radius: 100px;
-                transition: 0.5s;
-                font-family: $roboto;
-                font-size: 20px;
-                cursor: pointer;
-            }
-            button:hover{
-                background-color: transparent;
-                border-color: $yellow;
-                color: $yellow;
-            }
-        }
-        .yellow-decor-rect{
-            max-width: 600px;
-            width: 100%;
-            height: 300px;
-            background-color: $yellow;
-            position: absolute;
-            bottom: 10%;
-            right: 15%;
-
-        }
-        .yellow-decor-circle{
-            max-width: 200px;
-            width: 100%;
-            height: 200px;
-            background-color: $yellowTwo;
-            border-radius: 100px;
-            position: absolute;
-            top: 10%;
-            right: 12%;
-        }
-        .yellow-decor{
-            max-width: 300px;
-            width: 100%;
-            height: 300px;
-            border-radius: 300px;
-            border: 1px solid $yellow;
-            position: absolute;
-            bottom: 5%;
-            left: 10%;
-        }       
+    .visual-img {
+      max-width: 590px;
+      width: 100%;
+      height: 620px;
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      z-index: 1;
+      object-fit: cover;
     }
+    .visual-text-div {
+      max-width: 400px;
+      width: 100%;
+      height: 450px;
+      background-color: $white;
+      padding: 30px;
+      box-shadow: 5px 10px 30px $grey;
+      position: absolute;
+      top: 25%;
+      left: 55%;
+      z-index: 1;
+
+      .visual-title {
+        font-size: 40px;
+        margin: 20px 0;
+      }
+      .visual-title2 {
+        margin: 20px 0;
+        line-height: 30px;
+      }
+      .visual-text {
+        font-style: italic;
+        margin: 20px 0;
+      }
+      button {
+        max-width: 180px;
+        width: 100%;
+        color: $white;
+        background-color: $yellow;
+        padding: 15px;
+        border: solid;
+        border-color: $white;
+        border-radius: 100px;
+        transition: 0.5s;
+        font-family: $roboto;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: transparent;
+        border-color: $yellow;
+        color: $yellow;
+      }
+    }
+    .yellow-decor-rect {
+      max-width: 600px;
+      width: 100%;
+      height: 300px;
+      background-color: $yellow;
+      position: absolute;
+      bottom: 10%;
+      right: 15%;
+    }
+    .yellow-decor-circle {
+      max-width: 200px;
+      width: 100%;
+      height: 200px;
+      background-color: $yellowTwo;
+      border-radius: 100px;
+      position: absolute;
+      top: 10%;
+      right: 12%;
+    }
+    .yellow-decor {
+      max-width: 300px;
+      width: 100%;
+      height: 300px;
+      border-radius: 300px;
+      border: 1px solid $yellow;
+      position: absolute;
+      bottom: 5%;
+      left: 10%;
+    }
+  }
 }
 
 // prototype-section
-.prototype-section{
-    .mySwiper{
-        padding-top: 100px;
-        padding-bottom: 100px;
-        .swiper-wrapper{
-            max-width: 1140px;
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            .swiper-slide {
-                max-width: 300px;
-                width: 100%;
-                padding: 15px;
-                background-color: $white;
-                text-align: center;
-                height: 500px;
-                border-radius: 15px;
-                box-shadow: 5px 5px 15px $grey;
-                transition: 0.5s;
-                cursor: pointer;
-                img{
-                    max-width: 250px;
-                    width: 100%;
-                    height: 200px;
-                    
-                }
-                h3{
-                    font-size: 30px;
-                    padding: 20px;
-                }
-                p{
-                    line-height: 25px;
-                }
-                button{
-                    max-width: 100px;
-                    width: 100%;
-                    color: $white;
-                    background-color: $yellow;
-                    padding: 10px;
-                    border: solid;
-                    border-color: $white;
-                    border-radius: 100px;
-                    transition: 0.5s;
-                    font-family: $roboto;
-                    font-size: 15px;
-                    cursor: pointer;
-                }
-                button:hover{
-                    background-color: transparent;
-                    border-color: $yellow;
-                    color: $yellow;
-                }
-   
-            }
-            .swiper-slide:hover{
-                transform: scale(1.05);
-            }
-
+.prototype-section {
+  .mySwiper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .swiper-wrapper {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .swiper-slide {
+        max-width: 300px;
+        width: 100%;
+        padding: 15px;
+        background-color: $white;
+        text-align: center;
+        height: 500px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 15px $grey;
+        transition: 0.5s;
+        cursor: pointer;
+        img {
+          max-width: 250px;
+          width: 100%;
+          height: 200px;
         }
+        h3 {
+          font-size: 30px;
+          padding: 20px;
+        }
+        p {
+          line-height: 25px;
+        }
+        button {
+          max-width: 100px;
+          width: 100%;
+          color: $white;
+          background-color: $yellow;
+          padding: 10px;
+          border: solid;
+          border-color: $white;
+          border-radius: 100px;
+          transition: 0.5s;
+          font-family: $roboto;
+          font-size: 15px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: transparent;
+          border-color: $yellow;
+          color: $yellow;
+        }
+      }
+      .swiper-slide:hover {
+        transform: scale(1.05);
+      }
     }
+  }
 }
 
-
 // page design
-.design-section{
-    background-color: $white;
-    .design-main-div{
-        display: flex;
-        justify-content: space-between;
-        margin-left: 50px;
-        padding: 100px;
-        .design-section-div-rect{
-            max-width: 500px;
-            width: 100%;
-            height: 550px;
-            .design-img{
-                max-width: 400px;
-                width: 100%;
-                box-shadow: 5px 10px 30px $grey;
-
-            }
-            .design-title{
-                font-size: 20px;
-                font-weight: 700;
-                margin-bottom: 15px;
-            }
-            .design-text-div{
-                max-width: 400px;
-                width: 100%;
-                padding: 20px;
-            }
-            .design-text{
-                line-height: 20px;
-            }
-    
-        }
-        .design-section-div-circle{
-            max-width: 500px;
-            width: 100%;
-            height: 650px;
-            position: relative;
-            .dots-design{
-                max-width: 400px;
-                width: 100%;
-                position: absolute;
-                top: 0%;
-                right: 0%;
-            }
-            .design-img-circle{
-                max-width: 400px;
-                width: 100%;
-                border-radius: 350px;
-                position: absolute;
-                top: 5%;
-                left: 0%;
-                box-shadow: 5px 10px 30px $grey;
-            }
-            .design-text-div{
-                max-width: 400px;
-                width: 100%;
-                position: absolute;
-                bottom: 0%;
-                left: 0%;
-                padding: 20px;
-            }
-            .design-title{
-                font-size: 20px;
-                font-weight: 700;
-                margin-bottom: 20px;
-            }
-            .design-text{
-                line-height: 20px;
-    
-            }
-            button{
-                max-width: 140px;
-                width: 100%;
-                color: $white;
-                background-color: $grey;
-                padding: 15px;
-                border: solid;
-                border-color: $black;
-                border-radius: 100px;
-                transition: 0.5s;
-                font-family: $roboto;
-                font-size: 20px;
-                cursor: pointer;
-                margin-top: 10px;
-            }
-            button:hover{
-                background-color: transparent;
-                border-color: $yellow;
-                color: $yellow;
-            }
-        }
+.design-section {
+  background-color: $white;
+  .design-main-div {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    padding: 100px;
+    .design-section-div-rect {
+      max-width: 500px;
+      width: 100%;
+      height: 550px;
+      .design-img {
+        max-width: 400px;
+        width: 100%;
+        box-shadow: 5px 10px 30px $grey;
+      }
+      .design-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+      .design-text-div {
+        max-width: 400px;
+        width: 100%;
+        padding: 20px;
+      }
+      .design-text {
+        line-height: 20px;
+      }
     }
-
+    .design-section-div-circle {
+      max-width: 500px;
+      width: 100%;
+      height: 650px;
+      position: relative;
+      .dots-design {
+        max-width: 400px;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+      }
+      .design-img-circle {
+        max-width: 400px;
+        width: 100%;
+        border-radius: 350px;
+        position: absolute;
+        top: 5%;
+        left: 0%;
+        box-shadow: 5px 10px 30px $grey;
+      }
+      .design-text-div {
+        max-width: 400px;
+        width: 100%;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        padding: 20px;
+      }
+      .design-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .design-text {
+        line-height: 20px;
+      }
+      button {
+        max-width: 140px;
+        width: 100%;
+        color: $white;
+        background-color: $grey;
+        padding: 15px;
+        border: solid;
+        border-color: $black;
+        border-radius: 100px;
+        transition: 0.5s;
+        font-family: $roboto;
+        font-size: 20px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: transparent;
+        border-color: $yellow;
+        color: $yellow;
+      }
+    }
+  }
 }
 
 // designers section 2
 
 .designers-div {
-    background-image: url(../img/decor4.jpg);
+  background-image: url(../img/decor4.jpg);
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 100px;
+  .designers-block {
+    max-width: 1000px;
     width: 100%;
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin-bottom: 100px;
-    .designers-block{
-        max-width: 1000px;
-        width: 100%;
-        @include d-flex(flex, space-between, center);
-        position: absolute;
-        bottom: -10%;
-        left: 17%;
+    @include d-flex(flex, space-between, center);
+    position: absolute;
+    bottom: -10%;
+    left: 17%;
 
-        .designers{
-            max-width: 200px;
-            width: 100%;
-            background-color: $white;
-            padding: 20px;
-            @include d-flex(flex, center, center);
-            flex-direction: column;
-            box-shadow: 5px 10px 30px $grey;
-            .icon{
-                font-size: 60px;
-                color: $yellow;
-                margin-top: 30px;
-            }
-            .number{
-                font-size: 40px;
-                font-weight: 900;
-                color: $yellow;
-                margin-top: 20px;
-            }
-            .title{
-                font-size: 15px;
-                font-weight: 900;
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-        }
+    .designers {
+      max-width: 200px;
+      width: 100%;
+      background-color: $white;
+      padding: 20px;
+      @include d-flex(flex, center, center);
+      flex-direction: column;
+      box-shadow: 5px 10px 30px $grey;
+      .icon {
+        font-size: 60px;
+        color: $yellow;
+        margin-top: 30px;
+      }
+      .number {
+        font-size: 40px;
+        font-weight: 900;
+        color: $yellow;
+        margin-top: 20px;
+      }
+      .title {
+        font-size: 15px;
+        font-weight: 900;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     }
+  }
 }
 
-.footer{
-    background-color: $grey;
-    padding: 20px;
-    @include d-flex(flex, space-evenly, center);
-    .footer-div{
-        max-width: 500px;
-        width: 100%;
-        height: 200px;
-        .lists{
-            @include d-flex(flex, space-between, center);
-            color: $white;
-            max-width: 500px;   
-            .ul-list{
-                line-height: 30px;
-                .title{
-                    font-weight: 900;
-                    margin-bottom: 10px;
-                }
-            }
+.footer {
+  background-color: $grey;
+  padding: 20px;
+  @include d-flex(flex, space-evenly, center);
+  .footer-div {
+    max-width: 500px;
+    width: 100%;
+    height: 200px;
+    .lists {
+      @include d-flex(flex, space-between, center);
+      color: $white;
+      max-width: 500px;
+      .ul-list {
+        line-height: 30px;
+        .title {
+          font-weight: 900;
+          margin-bottom: 10px;
         }
-
+      }
     }
-    .social-icons{
-        @include d-flex(flex, space-between, center);
-        max-width: 300px;
-        width: 100%;
-        .icon{
-            color: $white;
-            font-size: 30px;
-            cursor: pointer;
-        }
-        .icon:hover{
-            color: $blue;
-        }
-            
+  }
+  .social-icons {
+    @include d-flex(flex, space-between, center);
+    max-width: 300px;
+    width: 100%;
+    .icon {
+      color: $white;
+      font-size: 30px;
+      cursor: pointer;
     }
-    
+    .icon:hover {
+      color: $blue;
+    }
+  }
 }
 
 // contact
 
-.form-style-9{
-
-	max-width: 700px;
-	background: $white;
-	padding: 30px;
-	margin: 50px auto;
-	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
-	border: 5px solid $yellow;
-    .title{
-        margin-bottom: 30px;
-        font-size: 40px;
-        font-weight: 500;
+.form-style-9 {
+  max-width: 700px;
+  background: $white;
+  padding: 30px;
+  margin: 50px auto;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+  border: 5px solid $yellow;
+  .title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 500;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      display: block;
+      margin-bottom: 10px;
+      min-height: 35px;
+      .field-style {
+        box-sizing: border-box;
+        padding: 8px;
+        outline: none;
+        border: none;
+        border-bottom: 3px solid $grey;
+      }
+      .field-style:focus {
+        box-shadow: 0 5px 6px -6px $grey;
+      }
+      .field-split {
+        width: 49%;
+      }
+      .field-full {
+        width: 100%;
+      }
+      .align-left {
+        float: left;
+      }
+      .align-right {
+        float: right;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+      }
+      button {
+        max-width: 250px;
+        width: 100%;
+        color: $white;
+        background-color: $yellow;
+        padding: 8px;
+        border: solid;
+        border-color: $yellow;
+        border-radius: 100px;
+        transition: 0.5s;
+        font-family: $roboto;
+        font-size: 20px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: $grey;
+        border-color: $grey;
+        color: $white;
+      }
     }
-    ul{
-        padding:0;
-        margin:0;
-        list-style:none;
-        li{
-            display: block;
-            margin-bottom: 10px;
-            min-height: 35px;
-            .field-style{
-                box-sizing: border-box; 
-                padding: 8px;
-                outline: none;
-                border: none;
-                border-bottom: 3px solid $grey;
-            }
-            .field-style:focus{
-                box-shadow: 0 5px 6px -6px $grey;
-
-            }
-            .field-split{
-                width: 49%;
-            }
-            .field-full{
-                width: 100%;
-            }
-            .align-left{
-                float:left;
-            }
-            .align-right{
-                float:right;
-            }
-            textarea{
-                width: 100%;
-                height: 100px;
-            }  
-            button{
-                max-width: 250px;
-                width: 100%;
-                color: $white;
-                background-color: $yellow;
-                padding: 8px;
-                border: solid;
-                border-color: $yellow;
-                border-radius: 100px;
-                transition: 0.5s;
-                font-family: $roboto;
-                font-size: 20px;
-                cursor: pointer;
-                margin-top: 10px;
-            }
-            button:hover{
-                background-color: $grey;
-                border-color: $grey;
-                color: $white;
-            }
-
-        }
+    div {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-style: italic;
     }
+  }
 }

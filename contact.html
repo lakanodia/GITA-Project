@@ -23,9 +23,10 @@
     <header class="header-block">
       <div class="header-main-div">
         <div class="header-logo-block">
-          <a class="a-logo" href="index.html">LOGO</a>
+          <a class="a-logo" href="">LOGO</a>
         </div>
-        <nav class="header-nav-block">
+
+        <nav class="header-nav-block" id="nav-block">
           <ul class="header-ul-block">
             <li class="nav-li">
               <a id="home-nav" href="index.html">Home </a>
@@ -35,70 +36,112 @@
             <li class="nav-li active-li"><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
+        <i id="burger-menu" class="fa-solid fa-bars burger"></i>
       </div>
     </header>
     <section class="contacnt-section">
       <div class="contact-div">
-        <form class="form-style-9">
+        <form id="mainForm" class="form-style-9">
           <h2 class="title">Contact Us</h2>
           <ul>
-              <li>
-                <input type="text" name="field1" class="field-style field-split align-left" placeholder="Name" />
-                <input type="email" name="field2" class="field-style field-split align-right" placeholder="Email" />
-              </li>
-              <li>
-                <input type="text" name="field3" class="field-style field-split align-left" placeholder="Phone" />
-                <input type="url" name="field4" class="field-style field-split align-right" placeholder="Website" />
-              </li>
-              <li>
-                  <input type="text" name="field3" class="field-style field-full align-none" placeholder="Subject" />
-              </li>
-              <li>
-                  <textarea name="field5" class="field-style" placeholder="Message"></textarea>
-              </li>
-              <li>
-                <button>Send</button>
-              </li>
-           </ul>
-         </form>
+            <li>
+              <input
+                id="input-name"
+                type="text"
+                name="field1"
+                class="field-style field-split align-left"
+                placeholder="Name"
+              />
+
+              <input
+                id="input-email"
+                type="email"
+                name="field2"
+                class="field-style field-split align-right"
+                placeholder="Email"
+                onkeydown="validation()"
+                required
+              />
+            </li>
+            <div>
+              <div class="error-text" id="error-name"></div>
+              <div class="error-text" id="error-email"></div>
+            </div>
+            <li>
+              <input
+                id="input-phone"
+                type="number"
+                name="field3"
+                class="field-style field-split align-left"
+                placeholder="Phone"
+              />
+              <input
+                id="input-adress"
+                type="text"
+                name="field4"
+                class="field-style field-split align-right"
+                placeholder="Adress"
+              />
+            </li>
+            <div>
+              <div class="error-text" id="error-phone"></div>
+              <div class="error-text" id="error-adress"></div>
+            </div>
+            <li>
+              <textarea
+                id="input-message"
+                name="field5"
+                class="field-style"
+                placeholder="Message"
+              ></textarea>
+              <div>
+                <div class="error-text" id="error-message"></div>
+              </div>
+            </li>
+            <li>
+              <button>Send</button>
+            </li>
+          </ul>
+        </form>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer-div">
-          <div class="lists">
-              <ul class="ul-list">
-                  <h2 class="title">Products</h2>
-                  <li>Design</li>
-                  <li>Decor</li>
-                  <li>Interior</li>
-                  <li>Exterior</li>
-              </ul>
-              <ul class="ul-list">
-                  <h2 class="title">Products</h2>
-                  <li>Design</li>
-                  <li>Decor</li>
-                  <li>Interior</li>
-                  <li>Exterior</li>
-              </ul>
-              <ul class="ul-list">
-                  <h2 class="title">Products</h2>
-                  <li>Design</li>
-                  <li>Decor</li>
-                  <li>Interior</li>
-                  <li>Exterior</li>
-              </ul>
-          </div>
-
+        <div class="lists">
+          <ul class="ul-list">
+            <h2 class="title">Products</h2>
+            <li>Design</li>
+            <li>Decor</li>
+            <li>Interior</li>
+            <li>Exterior</li>
+          </ul>
+          <ul class="ul-list">
+            <h2 class="title">Products</h2>
+            <li>Design</li>
+            <li>Decor</li>
+            <li>Interior</li>
+            <li>Exterior</li>
+          </ul>
+          <ul class="ul-list">
+            <h2 class="title">Products</h2>
+            <li>Design</li>
+            <li>Decor</li>
+            <li>Interior</li>
+            <li>Exterior</li>
+          </ul>
+        </div>
       </div>
       <div class="social-icons">
-          <i class="fa-brands fa-facebook icon"></i>
-          <i class="fa-brands fa-twitter icon"></i>
-          <i class="fa-brands fa-linkedin icon"></i>
-          <i class="fa-brands fa-google icon"></i>
-          <i class="fa-brands fa-youtube icon"></i>
-          <i class="fa-solid fa-envelope icon"></i>
+        <i class="fa-brands fa-facebook icon"></i>
+        <i class="fa-brands fa-twitter icon"></i>
+        <i class="fa-brands fa-linkedin icon"></i>
+        <i class="fa-brands fa-google icon"></i>
+        <i class="fa-brands fa-youtube icon"></i>
+        <i class="fa-solid fa-envelope icon"></i>
       </div>
-  </footer>
+    </footer>
+    <script src="validations.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
