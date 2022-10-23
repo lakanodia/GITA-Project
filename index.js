@@ -7,3 +7,18 @@ function setBugerMenu() {
   console.log("clkcc");
   navBlock.classList.toggle("activeNavigation");
 }
+
+$(document).ready(function () {
+  $(".decor-button").click(function () {
+    console.log("clicked");
+    $(".hide").slideToggle("slow");
+  });
+});
+
+$(document).ready(function () {
+  $(".visual-button").click(function () {
+    console.log("clicked");
+    $(".hide").slideToggle("slow");
+  });
+});
+

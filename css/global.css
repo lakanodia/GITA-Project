@@ -172,6 +172,9 @@ body {
   line-height: 35px;
   margin-top: 15px;
 }
+.banner-img-div .banner-text-div .hide {
+  display: none;
+}
 .banner-img-div .banner-text-div .banner-button {
   max-width: 170px;
   width: 100%;
@@ -303,6 +306,9 @@ body {
 .section3-main-div .decoration-div .decor-text {
   margin: 20px 0;
 }
+.section3-main-div .decoration-div .hide {
+  display: none;
+}
 .section3-main-div .decoration-div button {
   max-width: 180px;
   width: 100%;
@@ -323,6 +329,11 @@ body {
   border-color: #f1c50e;
   color: #f1c50e;
 }
+.section3-main-div img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
 .section3-main-div .decor-img1 {
   max-width: 350px;
   width: 100%;
@@ -335,6 +346,8 @@ body {
   -webkit-box-shadow: 5px 10px 30px rgb(83, 83, 83);
           box-shadow: 5px 10px 30px rgb(83, 83, 83);
   object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .section3-main-div .decor-img2 {
   max-width: 400px;
@@ -349,6 +362,8 @@ body {
   -webkit-box-shadow: 5px 10px 30px rgb(83, 83, 83);
           box-shadow: 5px 10px 30px rgb(83, 83, 83);
   object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .section3-main-div .decor-img3 {
   max-width: 650px;
@@ -361,6 +376,8 @@ body {
           box-shadow: 5px 10px 30px rgb(83, 83, 83);
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .section3-main-div .decor-img4 {
   max-width: 500px;
@@ -373,6 +390,8 @@ body {
           box-shadow: 5px 10px 30px rgb(83, 83, 83);
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .section3-main-div .text-decor-div {
   max-width: 350px;
@@ -421,6 +440,9 @@ body {
 .visual-section1 .vidual-main-div .visual-text-div .visual-title2 {
   margin: 20px 0;
   line-height: 30px;
+}
+.visual-section1 .vidual-main-div .visual-text-div .hide {
+  display: none;
 }
 .visual-section1 .vidual-main-div .visual-text-div .visual-text {
   font-style: italic;
@@ -516,6 +538,9 @@ body {
 }
 .prototype-section .mySwiper .swiper-wrapper .swiper-slide p {
   line-height: 25px;
+}
+.prototype-section .mySwiper .swiper-wrapper .swiper-slide .hide {
+  display: none;
 }
 .prototype-section .mySwiper .swiper-wrapper .swiper-slide button {
   max-width: 100px;
